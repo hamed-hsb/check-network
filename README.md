@@ -1,5 +1,5 @@
-HealthCheck API Service
-A lightweight, production-ready Health Check API service built with Go (Golang). This service provides endpoints to monitor the health status of your applications and services.
+Check Network API Service
+A lightweight, production-ready Check Network API service built with Go (Golang). This service provides endpoints to monitor the health status of your applications and services.
 
 📋 Table of Contents
 Overview
@@ -35,7 +35,7 @@ Contributing
 License
 
 🎯 Overview
-HealthCheck API is a simple yet powerful service that provides health monitoring endpoints for your applications. It follows Go best practices and clean architecture principles, making it easy to extend and maintain. The service returns comprehensive health information including system uptime, version, timestamp, and service dependencies status.
+CheckNetwork API is a simple yet powerful service that provides health monitoring endpoints for your applications. It follows Go best practices and clean architecture principles, making it easy to extend and maintain. The service returns comprehensive health information including system uptime, version, timestamp, and service dependencies status.
 
 ✨ Features
 Health Check Endpoints: Basic and detailed health status information
@@ -114,7 +114,7 @@ go mod tidy
 3. Build the Application
 bash
 # Using Go directly
-go build -o bin/healthcheck-api cmd/api/main.go
+go build -o bin/checknetwork cmd/api/main.go
 
 # Using Make
 make build
@@ -127,7 +127,7 @@ go run cmd/api/main.go
 make run
 
 # Using the binary
-./bin/healthcheck-api
+./bin/checknetwork
 ⚙️ Configuration
 The application can be configured using environment variables:
 
@@ -186,7 +186,7 @@ Endpoint: GET /
 Response:
 
 text
-Welcome to HealthCheck API. Try /health or /health/detailed
+Welcome to CheckNetwork API. Try /health or /health/detailed
 💻 Usage Examples
 Using cURL
 bash
@@ -211,7 +211,7 @@ fetch('http://localhost:8080/health')
     .then(data => console.log(data));
 📁 Project Structure
 text
-healthcheck-api/
+checknetwork/
 ├── cmd/
 │   └── api/
 │       └── main.go                 # Application entrypoint
@@ -261,14 +261,14 @@ Add business logic in domain layer if needed
 Build Docker Image
 bash
 # Using Docker directly
-docker build -t healthcheck-api:1.0.0 .
+docker build -t checknetwork:1.0.0 .
 
 # Using Make
 make docker-build
 Run Docker Container
 bash
 # Using Docker directly
-docker run -p 8080:8080 healthcheck-api:1.0.0
+docker run -p 8080:8080 checknetwork:1.0.0
 
 # Using Make
 make docker-run
