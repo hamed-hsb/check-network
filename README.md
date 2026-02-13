@@ -1,5 +1,5 @@
-Check Network API Service
-A lightweight, production-ready Check Network API service built with Go (Golang). This service provides endpoints to monitor the health status of your applications and services.
+CheckNetwork API Service
+A lightweight, production-ready Health Check API service built with Go (Golang). This service provides endpoints to monitor the health status of your applications and services.
 
 📋 Table of Contents
 Overview
@@ -105,8 +105,8 @@ Git
 🚀 Installation
 1. Clone the Repository
 bash
-git clone https://github.com/yourusername/healthcheck-api.git
-cd healthcheck-api
+git clone https://github.com/yourusername/checknetwork.git
+cd checknetwork
 2. Install Dependencies
 bash
 go mod download
@@ -306,12 +306,12 @@ import (
     "testing"
 )
 
-func TestHealthCheck(t *testing.T) {
+func TestCheckNetwork(t *testing.T) {
     handler := NewHealthHandler("1.0.0")
     req := httptest.NewRequest("GET", "/health", nil)
     w := httptest.NewRecorder()
     
-    handler.HealthCheck(w, req)
+    handler.CheckNetwork(w, req)
     
     if w.Code != http.StatusOK {
         t.Errorf("Expected status OK, got %v", w.Code)
